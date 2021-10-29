@@ -1,15 +1,15 @@
-﻿using Countries.Application.Converters;
+﻿using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using EnsureThat;
+using MediatR;
+using Countries.Application.Converters;
 using Countries.Application.Dtos;
 using Countries.Application.UseCases.Countries.Commands;
 using Countries.Application.UseCases.Countries.Queries;
 using Countries.Domain.Entities;
-using EnsureThat;
-using MediatR;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Countries.API.Controllers
 {
@@ -18,11 +18,18 @@ namespace Countries.API.Controllers
     public class CountriesController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public CountriesController(IMediator mediator)
+        private readonly ITypeConverter<CountryDto, Country> _converter;
+        private readonly ITypeConverter<Country, CountryDto> _dtoConverter;
+
+        public CountriesController(IMediator mediator, ITypeConverter<CountryDto, Country> converter, ITypeConverter<Country, CountryDto> dtoConverter)
         {
             EnsureArg.IsNotNull(mediator, nameof(mediator));
+            EnsureArg.IsNotNull(mediator, nameof(converter));
+            EnsureArg.IsNotNull(mediator, nameof(dtoConverter));
 
             _mediator = mediator;
+            _converter = converter;
+            _dtoConverter = dtoConverter;
         }
 
         [HttpGet]
@@ -33,7 +40,7 @@ namespace Countries.API.Controllers
 
             IEnumerable<Country> entities = await _mediator.Send(query, cancellationToken);
 
-            IEnumerable<CountryDto> result = entities.Map();
+            IEnumerable<CountryDto> result = _dtoConverter.Map(entities);
 
             return Ok(result);
         }
@@ -47,7 +54,7 @@ namespace Countries.API.Controllers
                 return BadRequest();
             }
 
-            Country entity = item.Map();
+            Country entity = _converter.Map(item);
 
             var command = new CreateCountry(entity);
 

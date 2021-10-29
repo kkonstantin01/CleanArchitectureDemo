@@ -1,6 +1,6 @@
-﻿using Countries.Domain.Entities;
+﻿using System.Collections.Generic;
 using MediatR;
-using System.Collections.Generic;
+using Countries.Domain.Entities;
 
 namespace Countries.Application.UseCases.Countries.Queries
 {

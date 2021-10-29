@@ -1,9 +1,4 @@
-using Countries.Application.UseCases.Countries.Commands;
-using Countries.Domain.Repositories;
-using Countries.Infrastructure.Persistence;
-using Countries.Infrastructure.Reposiotries;
-using MediatR;
-using MediatR.Extensions.FluentValidation.AspNetCore;
+using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +6,15 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using System.Reflection;
+using MediatR;
+using MediatR.Extensions.FluentValidation.AspNetCore;
+using Countries.Application.UseCases.Countries.Commands;
+using Countries.Domain.Repositories;
+using Countries.Infrastructure.Persistence;
+using Countries.Infrastructure.Reposiotries;
+using Countries.Application.Dtos;
+using Countries.Domain.Entities;
+using Countries.Application.Converters;
 
 namespace Countries.API
 {
@@ -44,6 +47,9 @@ namespace Countries.API
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddTransient<ICountryRepository, CountryRepository>();
+
+            services.AddScoped<ITypeConverter<Country, CountryDto>, CountryDtoConverter>();
+            services.AddScoped<ITypeConverter<CountryDto, Country>, CountryConverter>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

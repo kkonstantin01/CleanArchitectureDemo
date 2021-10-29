@@ -1,5 +1,5 @@
-﻿using Countries.Domain.Entities;
-using MediatR;
+﻿using MediatR;
+using Countries.Domain.Entities;
 
 namespace Countries.Application.UseCases.Countries.Commands
 {

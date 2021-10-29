@@ -1,26 +1,13 @@
-﻿using Countries.Application.Dtos;
-using Countries.Domain.Entities;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using Countries.Application.Dtos;
+using Countries.Domain.Entities;
 
 namespace Countries.Application.Converters
 {
-    public static class CountryConverter
+    public class CountryDtoConverter : ITypeConverter<Country, CountryDto>
     {
-        public static Country Map(this CountryDto source)
-        {
-            if (source == null)
-            {
-                return null;
-            }
-
-            return new Country
-            {
-                Name = source.Name
-            };
-        }
-
-        public static CountryDto Map(this Country source)
+        public CountryDto Map(Country source)
         {
             if (source == null)
             {
@@ -33,7 +20,28 @@ namespace Countries.Application.Converters
             };
         }
 
-        public static IEnumerable<CountryDto> Map(this IEnumerable<Country> sources)
+        public IEnumerable<CountryDto> Map(IEnumerable<Country> sources)
+        {
+            return sources?.Select(Map);
+        }
+    }
+
+    public class CountryConverter : ITypeConverter<CountryDto, Country>
+    {
+        public Country Map(CountryDto source)
+        {
+            if (source == null)
+            {
+                return null;
+            }
+
+            return new Country
+            {
+                Name = source.Name
+            };
+        }
+
+        public IEnumerable<Country> Map(IEnumerable<CountryDto> sources)
         {
             return sources?.Select(Map);
         }

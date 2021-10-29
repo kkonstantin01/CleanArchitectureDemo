@@ -1,9 +1,9 @@
-﻿using Countries.Domain.Entities;
-using Countries.Domain.Repositories;
-using EnsureThat;
-using MediatR;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
+using MediatR;
+using EnsureThat;
+using Countries.Domain.Entities;
+using Countries.Domain.Repositories;
 
 namespace Countries.Application.UseCases.Countries.Commands
 {

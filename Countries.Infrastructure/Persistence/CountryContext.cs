@@ -1,5 +1,5 @@
-﻿using Countries.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Countries.Domain.Entities;
 
 namespace Countries.Infrastructure.Persistence
 {
