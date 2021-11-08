@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Countries.API", "Countries.API\Countries.API.csproj", "{DC1CA46F-ADC5-4540-9E4C-FB1250077E31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Countries.API", "Countries.API\Countries.API.csproj", "{DC1CA46F-ADC5-4540-9E4C-FB1250077E31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Countries.Application", "Countries.Application\Countries.Application.csproj", "{204511CD-2542-4147-970E-300128B15E14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Countries.Application", "Countries.Application\Countries.Application.csproj", "{204511CD-2542-4147-970E-300128B15E14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Countries.Domain", "Countries.Domain\Countries.Domain.csproj", "{144EF116-0E95-456D-B307-F99AF54AF8DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Countries.Domain", "Countries.Domain\Countries.Domain.csproj", "{144EF116-0E95-456D-B307-F99AF54AF8DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Countries.Infrastructure", "Countries.Infrastructure\Countries.Infrastructure.csproj", "{E96D1D4C-8028-482E-A7EF-58E6D106F118}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Countries.Infrastructure", "Countries.Infrastructure\Countries.Infrastructure.csproj", "{E96D1D4C-8028-482E-A7EF-58E6D106F118}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

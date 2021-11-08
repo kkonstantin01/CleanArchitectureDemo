@@ -5,22 +5,22 @@ using Countries.Domain.Entities;
 
 namespace Countries.Application.Converters
 {
-    public class CountryConverter : ITypeConverter<CountryDto, Country>
+    public class CountryDtoConverter : ITypeConverter<Country, CountryDto>
     {
-        public Country Map(CountryDto source)
+        public CountryDto Map(Country source)
         {
             if (source == null)
             {
                 return null;
             }
 
-            return new Country
+            return new CountryDto
             {
                 Name = source.Name
             };
         }
 
-        public IEnumerable<Country> Map(IEnumerable<CountryDto> sources)
+        public IEnumerable<CountryDto> Map(IEnumerable<Country> sources)
         {
             return sources?.Select(Map);
         }
