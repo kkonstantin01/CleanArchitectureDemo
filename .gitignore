@@ -365,3 +365,4 @@ FodyWeavers.xsd
 # NDepend analysis results
 !NDependOut/
 NDependOut/*
+*.ndproj
