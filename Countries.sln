@@ -11,6 +11,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Countries.Domain", "Countri
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Countries.Infrastructure", "Countries.Infrastructure\Countries.Infrastructure.csproj", "{E96D1D4C-8028-482E-A7EF-58E6D106F118}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7D06BC66-FC0B-4134-800C-9AA819BA1196}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0B743D1D-81CC-4670-90D8-C7664CF98F16}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Countries.API.UnitTests", "Countries.API.UnitTests\Countries.API.UnitTests.csproj", "{5EF9BD9A-7485-476E-A00B-197D5D9BD583}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Countries.Application.UnitTests", "Countries.Application.UnitTests\Countries.Application.UnitTests.csproj", "{B75E1ED3-231C-453A-9DF7-E3DBED245E31}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Countries.Domain.UnitTests", "Countries.Domain.UnitTests\Countries.Domain.UnitTests.csproj", "{67E4EBD5-FE85-453C-BA6D-EC28C5C43FF4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Countries.Infrastructure.UnitTests", "Countries.Infrastructure.UnitTests\Countries.Infrastructure.UnitTests.csproj", "{CAE246BA-7A59-4403-9C54-C7DC602A34FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{590E603A-E0DC-4224-87B4-580B4F74FFEE}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.txt = LICENSE.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,14 +50,37 @@ Global
 		{E96D1D4C-8028-482E-A7EF-58E6D106F118}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E96D1D4C-8028-482E-A7EF-58E6D106F118}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E96D1D4C-8028-482E-A7EF-58E6D106F118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EF9BD9A-7485-476E-A00B-197D5D9BD583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EF9BD9A-7485-476E-A00B-197D5D9BD583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EF9BD9A-7485-476E-A00B-197D5D9BD583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EF9BD9A-7485-476E-A00B-197D5D9BD583}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B75E1ED3-231C-453A-9DF7-E3DBED245E31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B75E1ED3-231C-453A-9DF7-E3DBED245E31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B75E1ED3-231C-453A-9DF7-E3DBED245E31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B75E1ED3-231C-453A-9DF7-E3DBED245E31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67E4EBD5-FE85-453C-BA6D-EC28C5C43FF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67E4EBD5-FE85-453C-BA6D-EC28C5C43FF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67E4EBD5-FE85-453C-BA6D-EC28C5C43FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67E4EBD5-FE85-453C-BA6D-EC28C5C43FF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAE246BA-7A59-4403-9C54-C7DC602A34FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAE246BA-7A59-4403-9C54-C7DC602A34FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAE246BA-7A59-4403-9C54-C7DC602A34FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAE246BA-7A59-4403-9C54-C7DC602A34FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DC1CA46F-ADC5-4540-9E4C-FB1250077E31} = {7D06BC66-FC0B-4134-800C-9AA819BA1196}
+		{204511CD-2542-4147-970E-300128B15E14} = {7D06BC66-FC0B-4134-800C-9AA819BA1196}
+		{144EF116-0E95-456D-B307-F99AF54AF8DE} = {7D06BC66-FC0B-4134-800C-9AA819BA1196}
+		{E96D1D4C-8028-482E-A7EF-58E6D106F118} = {7D06BC66-FC0B-4134-800C-9AA819BA1196}
+		{5EF9BD9A-7485-476E-A00B-197D5D9BD583} = {0B743D1D-81CC-4670-90D8-C7664CF98F16}
+		{B75E1ED3-231C-453A-9DF7-E3DBED245E31} = {0B743D1D-81CC-4670-90D8-C7664CF98F16}
+		{67E4EBD5-FE85-453C-BA6D-EC28C5C43FF4} = {0B743D1D-81CC-4670-90D8-C7664CF98F16}
+		{CAE246BA-7A59-4403-9C54-C7DC602A34FA} = {0B743D1D-81CC-4670-90D8-C7664CF98F16}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8407B858-3588-4533-AD6B-6A1E9995AA50}
-	EndGlobalSection
-	GlobalSection(NDepend) = preSolution
-		Project = ".\Countries.ndproj"
 	EndGlobalSection
 EndGlobal
