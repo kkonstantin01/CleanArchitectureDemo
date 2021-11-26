@@ -6,7 +6,7 @@ using Countries.Domain.Entities;
 using Countries.Domain.Repositories;
 using Countries.Infrastructure.Persistence;
 
-namespace Countries.Infrastructure.Reposiotries
+namespace Countries.Infrastructure.Repositories
 {
     public class CountryRepository : Repository<Country>, ICountryRepository
     {

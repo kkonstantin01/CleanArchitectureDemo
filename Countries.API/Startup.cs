@@ -11,7 +11,7 @@ using MediatR.Extensions.FluentValidation.AspNetCore;
 using Countries.Application.UseCases.Countries.Commands;
 using Countries.Domain.Repositories;
 using Countries.Infrastructure.Persistence;
-using Countries.Infrastructure.Reposiotries;
+using Countries.Infrastructure.Repositories;
 using Countries.Application.Dtos;
 using Countries.Domain.Entities;
 using Countries.Application.Converters;

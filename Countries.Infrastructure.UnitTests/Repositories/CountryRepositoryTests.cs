@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Xunit;
 using Countries.Domain.Entities;
 using Countries.Infrastructure.Persistence;
-using Countries.Infrastructure.Reposiotries;
+using Countries.Infrastructure.Repositories;
 
 namespace Countries.Infrastructure.UnitTests.Repositories
 {

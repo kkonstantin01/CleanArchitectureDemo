@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Countries.Domain.Repositories;
 using Countries.Infrastructure.Persistence;
 
-namespace Countries.Infrastructure.Reposiotries
+namespace Countries.Infrastructure.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
