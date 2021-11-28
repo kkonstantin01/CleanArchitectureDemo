@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
 using Xunit;
 using Moq;
 using Countries.Application.UseCases.Countries.Commands;
@@ -9,6 +10,7 @@ using Countries.Domain.Repositories;
 
 namespace Countries.Application.UnitTests.UseCases.Countries.Commands
 {
+    [ExcludeFromCodeCoverage]
     public class CreateCountryHandlerTests
     {
         [Fact]

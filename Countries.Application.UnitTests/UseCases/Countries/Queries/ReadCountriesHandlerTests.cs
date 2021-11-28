@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
 using Xunit;
 using Moq;
 using Countries.Application.UseCases.Countries.Queries;
@@ -10,6 +11,7 @@ using Countries.Domain.Repositories;
 
 namespace Countries.Application.UnitTests.UseCases.Countries.Queries
 {
+    [ExcludeFromCodeCoverage]
     public class ReadCountriesHandlerTests
     {
         [Fact]

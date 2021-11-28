@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using System.Threading;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.AspNetCore.Mvc;
 using Xunit;
 using Moq;
@@ -12,6 +13,7 @@ using Countries.Domain.Entities;
 
 namespace Countries.API.UnitTests.Controllers
 {
+    [ExcludeFromCodeCoverage]
     public class CountriesControllerTests
     {
         [Fact]

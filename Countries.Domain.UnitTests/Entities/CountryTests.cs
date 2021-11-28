@@ -1,8 +1,10 @@
-﻿using Xunit;
+﻿using System.Diagnostics.CodeAnalysis;
+using Xunit;
 using Countries.Domain.Entities;
 
 namespace Countries.Domain.UnitTests.Entities
 {
+    [ExcludeFromCodeCoverage]
     public class CountryTests
     {
         [Fact]

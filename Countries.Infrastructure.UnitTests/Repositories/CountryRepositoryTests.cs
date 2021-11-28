@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
 using Countries.Domain.Entities;
@@ -10,6 +11,7 @@ using Countries.Infrastructure.Repositories;
 
 namespace Countries.Infrastructure.UnitTests.Repositories
 {
+    [ExcludeFromCodeCoverage]
     public class CountryRepositoryTests
     {
         [Fact]

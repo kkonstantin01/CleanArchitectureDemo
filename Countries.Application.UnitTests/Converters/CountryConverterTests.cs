@@ -1,10 +1,12 @@
-﻿using Xunit;
+﻿using System.Diagnostics.CodeAnalysis;
+using Xunit;
 using Countries.Application.Converters;
 using Countries.Application.Dtos;
 using Countries.Domain.Entities;
 
 namespace Countries.Application.UnitTests.Converters
 {
+    [ExcludeFromCodeCoverage]
     public class CountryConverterTests
     {
         [Fact]
