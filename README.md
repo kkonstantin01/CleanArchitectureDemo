@@ -1,4 +1,4 @@
-# Clean Architecture for Webapplications
+# Clean Architecture for Web Applications
 
 This sample was built for the **ADC .NET Conference 2021**. The demo application follows the Clean Architecture principles. Feel free to use it as a template for your own application, if you like!
 ## Technologies
